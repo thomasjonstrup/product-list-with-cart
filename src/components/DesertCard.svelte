@@ -1,27 +1,12 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge';
-	import { formatCurreny } from '$lib/helpers';
+	import { formatCurreny, type ModuleImportInterface } from '$lib/helpers';
 	import type { DesertCartItem, DesertItem } from '../stores/cartStore';
 
 	import IconCart from '../assets/images/icon-add-to-cart.svg';
 	import IconDecrement from '../assets/images/icon-decrement-quantity.svg';
 	import IconIncrement from '../assets/images/icon-increment-quantity.svg';
-	/* 	import IconDecrement from './IconDecrement.svelte';
-	 */
-	interface ModuleImportInterface {
-		default: {
-			img: {
-				h: number;
-				src: string;
-				w: number;
-			};
-			sources: {
-				avif: string;
-				jpeg: string;
-				webp: string;
-			};
-		};
-	}
+
 	const imageModules = import.meta.glob('../assets/images/*.jpg', {
 		eager: true,
 		query: {

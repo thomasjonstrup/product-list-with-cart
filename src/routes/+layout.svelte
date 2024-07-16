@@ -3,6 +3,10 @@
 	import '../app.css';
 </script>
 
+<head>
+	<title>Frontend Mentor | Product list with cart</title>
+</head>
+
 <!-- class="grid justify-center min-h-screen" -->
 <main>
 	<slot />
@@ -16,5 +20,3 @@
 		<a class="text-red" href="https://github.com/thomasjonstrup">Thomas Jonstrup</a>.
 	</div>
 </footer>
-
-<title>Frontend Mentor | Product list with cart</title>

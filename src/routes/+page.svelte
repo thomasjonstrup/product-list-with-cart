@@ -3,7 +3,7 @@
 
 	import IconOrderConfirmed from '../assets/images/icon-order-confirmed.svg';
 	import { cartStore, type DesertCartItem, type DesertItem } from '../stores/cartStore';
-	import { formatCurreny } from '$lib/helpers';
+	import { formatCurreny, type ModuleImportInterface } from '$lib/helpers';
 	import Cart from '../components/Cart.svelte';
 	import DesertCard from '../components/DesertCard.svelte';
 	import data from '$lib/data.json';
@@ -41,7 +41,12 @@
 		cart.clearCart();
 	};
 
-	const images = import.meta.glob('../assets/images/*.jpg', { eager: true });
+	const imageModules = import.meta.glob('../assets/images/*thumbnail.jpg', {
+		eager: true,
+		query: {
+			enhanced: true
+		}
+	}) as Record<string, ModuleImportInterface>;
 
 	const desertList: DesertItem[] = data;
 </script>
@@ -83,9 +88,13 @@
 				{#each $cart as cartItem}
 					<div class="flex justify-between items-center border-b border-rose-100 pb-2">
 						<div class="flex gap-2 items-center">
-							{#await import(`.${cartItem.thumbnail}`) then { default: src }}
-								<img {src} alt={cartItem.name + ' thumbnail'} class="size-8 rounded-sm" />
-							{/await}
+							{#if imageModules[`.${cartItem.thumbnail}`]}
+								<img
+									src={imageModules[`.${cartItem.thumbnail}`].default.img.src}
+									alt={cartItem.name + ' thumbnail'}
+									class="size-8 rounded-sm"
+								/>
+							{/if}
 							<div>
 								<p class="text-sm font-semibold pb-2">{cartItem.name}</p>
 								<div class="flex gap-1">
@@ -109,7 +118,7 @@
 						handleClear();
 						dialog.close();
 					}}
-					type="reset">Submit new Order</button
+					type="submit">Submit new Order</button
 				>
 			</form>
 		</div>
