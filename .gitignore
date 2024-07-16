@@ -1,9 +1,11 @@
 # Output
 .output
 .vercel
-/.svelte-kit
 /build
 /.netlify
+
+output
+generated
 
 # OS
 .DS_Store
