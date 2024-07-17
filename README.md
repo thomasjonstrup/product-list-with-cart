@@ -2,6 +2,8 @@
 
 This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6e848499-9ef4-4f3c-9e21-46e05e1dccc1/deploy-status)](https://app.netlify.com/sites/product-list-with-cart-fm/deploys)
+
 ## Table of contents
 
 - [Overview](#overview)
