@@ -50,8 +50,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [Svelte](https://reactjs.org/) - Svelte
-- [Svelte-kit](https://nextjs.org/) - Svelte-kit framework
+- [Svelte](https://svelte.dev) - Svelte
+- [Svelte-kit](https://svelte.dev) - Svelte-kit framework
 - [Tailwind](https://tailwindcss.com) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
@@ -67,11 +67,10 @@ Learned more about Svelte and learning about their state management.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+- Website - [Thomas Jonstrup](https://thomasjonstrup.dk)
+- Frontend Mentor -
+  [@thomasjonstrup](https://www.frontendmentor.io/profile/thomasjonstrup)
+  Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
 ## Developing
 
